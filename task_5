@@ -8,16 +8,26 @@ import java.util.Scanner;
 
 public class Task_5 {
     public static void main(String[] args) {
-        int counter = 0;
+        int counterVowals = 0;
+        int counterSpaces = 0;
+        int counterConsonants = 0;
         System.out.print("Enter a sentence: ");
         Scanner scanner = new Scanner(System.in);
         String sentence = scanner.nextLine();
         for (int i = 0; i < sentence.length(); i++) {
             char ch = sentence.charAt(i);
-            if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u'){
-                counter++;
+            if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u'||
+                    ch =='а' ||ch =='о'||ch =='у'||ch =='е'||ch =='и'||ch=='ъ'){
+                counterVowals++;
+            }else if(ch == ' '){
+                counterSpaces ++;
+            }else if(ch != 'a'|| ch != 'e'|| ch != 'i' ||ch != 'o' ||ch != 'u' ||
+                    ch !='а' ||ch !='о'||ch !='у'||ch !='е'||ch !='и'||ch!='ъ'){
+                counterConsonants++;
             }
         }
-        System.out.println("Number of vowels is " + counter);
+        System.out.println("Number of vowels is " + counterVowals);
+        System.out.println("Number of consonants is " + counterConsonants);
+        System.out.println("Number of spaces is " + counterSpaces);
     }
 }
