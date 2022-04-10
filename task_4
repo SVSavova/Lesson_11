@@ -1,4 +1,5 @@
 /*
+/*
 Напишете програма, в която потребителят въвежда числа. Накрая програмата трябва да изведе най-голямото
 и най-малкото число от въведените
  */
@@ -9,27 +10,25 @@ import java.util.Scanner;
 public class Task_4 {
     public static void main(String[] args) {
         String answer = " ";
-        int num1, num2;
+        int number;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         do {
-            System.out.print("Enter num 1: ");
             Scanner scanner = new Scanner(System.in);
-            num1 = scanner.nextInt();
-            System.out.print("Enter num 2: ");
-            num2 = scanner.nextInt();
-            if (num1 > num2) {
-                max = num1;
-                min = num2;
-            } else if (num1 < num2) {
-                max = num2;
-                min = num1;
+            System.out.print("Enter a number: ");
+            number = scanner.nextInt();
+            if (number > max) {
+                max = number;
+
             }
-            System.out.println("the small number is: " + min);
-            System.out.println("the large number is: " + max);
+            if (number < min) {
+                min = number;
+            }
             System.out.print("Do you wont to continue? ");
             answer = scanner.next();
         } while (answer.equalsIgnoreCase("yes"));
+        System.out.println("the small number is: " + min);
+        System.out.println("the large number is: " + max);
         System.out.println("Goodbye!");
     }
 }
