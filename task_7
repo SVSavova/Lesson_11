@@ -1,0 +1,34 @@
+/*
+да се напише програма, в която потребителят въвежда пин-код от конзолата. Има право на три грешни опита.
+Пин-кодът трябва да се зададе с константа. При неправилно въвеждане, програмата изписва: Неправилно, опитайте
+отново. При правилно изписване: Правилно, добре дошли отново. При изчерпване на опитите:
+Съжаляваме, акаунтът е заключен
+ */
+
+import java.util.Scanner;
+
+public class Task_7_Pin {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        final int pin = 2846;
+        int num;
+        int counter = 0;
+        do {
+            System.out.print("Enter the PIN: ");
+            num = scanner.nextInt();
+            counter++;
+            if (num != pin && counter != 3) {
+                System.out.println("Try again...");
+            } else if (num == pin) {
+                System.out.println("Welcome back!");
+                break;
+            }
+            if (counter == 3) {
+                System.out.println("Sorry, the account is locked :( ...");
+                break;
+            }
+        } while (counter < 3);
+
+    }
+
+}
