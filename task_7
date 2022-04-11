@@ -18,7 +18,7 @@ public class Task_7_Pin {
             num = scanner.nextInt();
             counter++;
             if (num != pin && counter != 3) {
-                System.out.println("Try again...");
+                System.out.println("Wrong, try again...");
             } else if (num == pin) {
                 System.out.println("Welcome back!");
                 break;
