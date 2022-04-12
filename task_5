@@ -19,10 +19,9 @@ public class Task_5 {
             if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u'||
                     ch =='а' ||ch =='о'||ch =='у'||ch =='е'||ch =='и'||ch=='ъ'){
                 counterVowals++;
-            }else if(ch == ' '){
+            } else if (ch == ' '){
                 counterSpaces ++;
-            }else if(ch != 'a'|| ch != 'e'|| ch != 'i' ||ch != 'o' ||ch != 'u' ||
-                    ch !='а' ||ch !='о'||ch !='у'||ch !='е'||ch !='и'||ch!='ъ'){
+            } else i {
                 counterConsonants++;
             }
         }
